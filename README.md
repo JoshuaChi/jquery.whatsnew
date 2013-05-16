@@ -3,6 +3,8 @@
 jQuery What's NEW is a simple balloon UI element inspired by google+.
 It was designed to show your site latest features to users. But of course you can use it anywhere you like.
 
+example: https://github.com/JoshuaChi/jquery.whatsnew/blob/master/index.html
+
 # Usage
 jQuery What's NEW requires a specific HTML structure in order to work. There is also a small stylesheet that can be used. jQuery is a dependency.
 
@@ -49,7 +51,7 @@ Invoke the plugin by calling it on a selector like normal.
 ```
 
 ## Screenshot
-![jQuery Whatsnew Screenshot](/screenshot.png)
+![jQuery Whatsnew Screenshot](https://github.com/JoshuaChi/jquery.whatsnew/blob/master/screenshot.png)
 
 ## Credits
 
