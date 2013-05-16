@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+jquery.whatsnew
+===============
+
+The lib used to display what's new in your product. Copy idea from google+
+=======
 # jQuery What's NEW 
 
 jQuery What's NEW is a simple balloon UI element inspired by google+.
@@ -61,3 +67,4 @@ jQuery Whatsnew developed by [Joshua Chi](joshokn@gmail.com) at [KiwiTask](http:
 MIT license:
 
 http://www.opensource.org/licenses/MIT
+>>>>>>> init project

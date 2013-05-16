@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+  <title>jquery.whatsnew</title>
+  <link rel='stylesheet' href='/css/jquery.wahtsnew.css' type='text/css' media='screen' charset='utf-8'>
+  <style type='text/css' media='screen'>
+    body {
+      text-align:center;
+      background:#f7f7f7;
+      font-family:georgia;
+      font-size:22px;
+      text-shadow:1px 1px 1px #FFF;
+      margin:200px;
+    }
+
+
+
+    a { color:#999; text-decoration:none; }
+    label { display: block; }
+
+    div.tu-dialog {
+      width: 300px;
+    }
+
+    footer {
+      font-size:12px;
+    }
+    footer a { color:#40738d; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JQuery What's New</h1>
+  </header>
+
+  <article style='min-height:600px;width:100%;text-align:center;'>
+    <img src='/images/profile.png' width='500px' height='200px'>
+  </article>
+  <div class="tu-dialog">
+    <div class="tu-dialog-content">
+      <img class="tu-dialog-icon" src="/images/kiwitask-avatar.png" width='32px' height='32px'>
+      <a href="#__dismiss__" rel="nextstep">
+        <img class="tu-dialog-close" src="/images/x_button.png">
+      </a>
+      <div class="iph-resize">
+        <div class="tu-dialog-title">完善您的主页</div>
+        首先您可以上传您的头像，增加主页的可信度。
+      </div>
+      <div class="tu-dialog-pages">
+        <img src="/images/plus3_gh_dots_1of3.png"></div>
+      <a href="#__2__" rel="nextstep">
+        <button class="iph-button">Next</button>
+      </a>
+    </div>
+  </div>
+  <footer>
+    Developed by <a mailto="joshokn@gmail.com">Joshua Chi</a> at <a href="http://www.kiwitask.com">KiwiTask</a>
+  </footer>
+  <script type='text/javascript' charset='utf-8' src='/js/jquery.js'></script>
+  <script type='text/javascript' charset='utf-8' src='/js/jquery.whatsnew.js'></script>
+  <script type='text/javascript' language='javascript'>
+  $(function(){
+      $('div.tu-dialog').whatsnew({
+        'ele': 'article > img',
+        'position': 'right'
+      });
+  });
+  </script>
+</body>
