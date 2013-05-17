@@ -51,7 +51,7 @@ Invoke the plugin by calling it on a selector like normal.
 ```
 
 ## Screenshot
-![jQuery Whatsnew Screenshot](https://github.com/JoshuaChi/jquery.whatsnew/blob/master/screenshot.png)
+![jQuery Whatsnew Screenshot](/screenshot.png)
 
 ## Credits
 
