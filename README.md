@@ -59,7 +59,7 @@ In below example, please be aware that you want the $dialog1 be attached with $e
 ```
 
 ## Screenshot
-![jQuery Whatsnew Screenshot](/screenshot.png)
+![jQuery Whatsnew Screenshot](https://raw.github.com/JoshuaChi/jquery.whatsnew/master/screenshot.png)
 
 ## Credits
 
