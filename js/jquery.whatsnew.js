@@ -80,12 +80,12 @@
               break;
             case 'left':
               var data = [elementTop
-                , elementLeft + elementWidth
+                , elementLeft + elementWidth + 15
                 , 34];
               break;
             case 'right':
               var data = [elementTop
-                , elementLeft - whatsnewBoxWidth
+                , elementLeft - whatsnewBoxWidth - 15
                 , 84];
               break;
             default:
