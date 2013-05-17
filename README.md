@@ -10,8 +10,9 @@ jQuery What's NEW requires a specific HTML structure in order to work. There is 
 
 ```html
 <head>
-  <script type='text/javascript' charset='utf-8' src='jquery.js'></script>
-  <script type='text/javascript' charset='utf-8' src='jquery.whatsnew.js'></script>
+  <script type='text/javascript' charset='utf-8' src='http://code.jquery.com/jquery-1.9.1.js'></script>
+  <script type='text/javascript' charset='utf-8' src='http://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+  <script type='text/javascript' charset='utf-8' src='/js/jquery.whatsnew.js'></script>
   <link rel='stylesheet' href='jquery.whatsnew.css' type='text/css'>
 </head>
 ```
@@ -25,26 +26,33 @@ The HTML structure looks like this.
         <img class="tu-dialog-close" src="/images/x_button.png">
       </a>
       <div class="iph-resize">
-        <div class="tu-dialog-title">完善您的主页</div>
-        首先您可以上传您的头像，增加主页的可信度。
+        <div class="tu-dialog-title">New Feature #3</div>
+        <div class='tu-dialog-body'>This is the lib which you can used to show your site new features</div>
       </div>
       <div class="tu-dialog-pages">
-        <img src="/images/plus3_gh_dots_1of3.png"></div>
-      <a href="#__2__" rel="nextstep">
-        <button class="iph-button">Next</button>
-      </a>
+      </div>
     </div>
   </div>
 ```
 
 Invoke the plugin by calling it on a selector like normal.
 
+In below example, please be aware that you want the $dialog1 be attached with $ele1 in position xx.
+
 ```html
-<script type='text/javascript'>
+<script type='text/javascript' language='javascript'>
   $(function(){
-      $('div.tu-dialog').whatsnew({
-        'ele': 'article > img',
-        'position': 'right'
+      $.fn.whatsnew({
+        'eles': [
+          {'dom': $ele1, 'position': xx}, 
+          {'dom': $ele2, 'position': xx},
+          {'dom': $ele3, 'position': xx}
+        ],
+        'boxs':[
+          $dialog1,
+          $dialog2,
+          $dialog3
+        ]
       });
   });
 </script>

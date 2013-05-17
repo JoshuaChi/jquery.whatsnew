@@ -13,13 +13,29 @@
       margin:200px;
     }
 
-
-
     a { color:#999; text-decoration:none; }
     label { display: block; }
 
     div.tu-dialog {
       width: 300px;
+    }
+
+    article {
+      min-height:900px;
+      width:100%;
+    }
+    
+    article > div {
+      position: absolute;
+      top:800px;
+      left:500px;
+      width: 500px;
+      height: auto;
+      border: 1px solid #333;
+    }
+
+    article > pre {
+      text-align:left;
     }
 
     footer {
@@ -33,36 +49,79 @@
     <h1>JQuery What's New</h1>
   </header>
 
-  <article style='min-height:600px;width:100%;text-align:center;'>
-    <img src='/images/profile.png' width='500px' height='200px'>
+  <article>
+  <img src='/images/profile.png' width='500px' height='200px'>
+  <div>
+  <pre>
+   * How to use it
+   * $('div.tu-dialog').popbox({
+   *   'ele': 'article > img',
+   *   'position': 'right'
+   * });
+   </pre>
+  </div>
   </article>
-  <div class="tu-dialog">
+  <div class="tu-dialog" id="dialog-1">
     <div class="tu-dialog-content">
       <img class="tu-dialog-icon" src="/images/kiwitask-avatar.png" width='32px' height='32px'>
       <a href="#__dismiss__" rel="nextstep">
         <img class="tu-dialog-close" src="/images/x_button.png">
       </a>
       <div class="iph-resize">
-        <div class="tu-dialog-title">完善您的主页</div>
-        首先您可以上传您的头像，增加主页的可信度。
+        <div class="tu-dialog-title">New Feature #1</div>
+        <div class='tu-dialog-body'>This is the lib which you can used to show your site new features</div>
       </div>
       <div class="tu-dialog-pages">
-        <img src="/images/plus3_gh_dots_1of3.png"></div>
-      <a href="#__2__" rel="nextstep">
-        <button class="iph-button">Next</button>
+      </div>
+    </div>
+  </div>
+  <div class="tu-dialog" id="dialog-2">
+    <div class="tu-dialog-content">
+      <img class="tu-dialog-icon" src="/images/kiwitask-avatar.png" width='32px' height='32px'>
+      <a href="#__dismiss__" rel="nextstep">
+        <img class="tu-dialog-close" src="/images/x_button.png">
       </a>
+      <div class="iph-resize">
+        <div class="tu-dialog-title">New Feature #2</div>
+        <div class='tu-dialog-body'>This is the lib which you can used to show your site new features</div>
+      </div>
+      <div class="tu-dialog-pages">
+      </div>
+    </div>
+  </div>
+  <div class="tu-dialog" id="dialog-3">
+    <div class="tu-dialog-content">
+      <img class="tu-dialog-icon" src="/images/kiwitask-avatar.png" width='32px' height='32px'>
+      <a href="#__dismiss__" rel="nextstep">
+        <img class="tu-dialog-close" src="/images/x_button.png">
+      </a>
+      <div class="iph-resize">
+        <div class="tu-dialog-title">New Feature #3</div>
+        <div class='tu-dialog-body'>This is the lib which you can used to show your site new features</div>
+      </div>
+      <div class="tu-dialog-pages">
+      </div>
     </div>
   </div>
   <footer>
     Developed by <a mailto="joshokn@gmail.com">Joshua Chi</a> at <a href="http://www.kiwitask.com">KiwiTask</a>
   </footer>
-  <script type='text/javascript' charset='utf-8' src='/js/jquery.js'></script>
+  <script type='text/javascript' charset='utf-8' src='http://code.jquery.com/jquery-1.9.1.js'></script>
+  <script type='text/javascript' charset='utf-8' src='http://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
   <script type='text/javascript' charset='utf-8' src='/js/jquery.whatsnew.js'></script>
   <script type='text/javascript' language='javascript'>
   $(function(){
-      $('div.tu-dialog').whatsnew({
-        'ele': 'article > img',
-        'position': 'right'
+      $.fn.whatsnew({
+        'eles': [
+          {'dom': 'article > img', 'position':'down'}, 
+          {'dom': 'article > div', 'position':'right'},
+          {'dom': 'article > div', 'position': 'up'}
+        ],
+        'boxs':[
+          '#dialog-1',
+          '#dialog-2',
+          '#dialog-3'
+        ]
       });
   });
   </script>
