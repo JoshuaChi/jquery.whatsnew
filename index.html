@@ -31,32 +31,78 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+        <h1>jQuery What's NEW</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>jQuery What's NEW is a simple balloon UI element inspired by google+.
+It was designed to show your site latest features to users. But of course you can use it anywhere you like.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<p>example: <a href="https://github.com/JoshuaChi/jquery.whatsnew/blob/master/index.html">https://github.com/JoshuaChi/jquery.whatsnew/blob/master/index.html</a></p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h1>Usage</h1>
 
-<h3>Designer Templates</h3>
+<p>jQuery What's NEW requires a specific HTML structure in order to work. There is also a small stylesheet that can be used. jQuery is a dependency.</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<div class="highlight"><pre><span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">'text/javascript'</span> <span class="na">charset=</span><span class="s">'utf-8'</span> <span class="na">src=</span><span class="s">'http://code.jquery.com/jquery-1.9.1.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">'text/javascript'</span> <span class="na">charset=</span><span class="s">'utf-8'</span> <span class="na">src=</span><span class="s">'http://code.jquery.com/ui/1.10.3/jquery-ui.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">'text/javascript'</span> <span class="na">charset=</span><span class="s">'utf-8'</span> <span class="na">src=</span><span class="s">'/js/jquery.whatsnew.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">'stylesheet'</span> <span class="na">href=</span><span class="s">'jquery.whatsnew.css'</span> <span class="na">type=</span><span class="s">'text/css'</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</pre></div>
 
-<h3>Rather Drive Stick?</h3>
+<p>The HTML structure looks like this.</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<div class="highlight"><pre>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tu-dialog"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tu-dialog-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"tu-dialog-icon"</span> <span class="na">src=</span><span class="s">"/images/kiwitask-avatar.png"</span> <span class="na">width=</span><span class="s">'32px'</span> <span class="na">height=</span><span class="s">'32px'</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#__dismiss__"</span> <span class="na">rel=</span><span class="s">"nextstep"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"tu-dialog-close"</span> <span class="na">src=</span><span class="s">"/images/x_button.png"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"iph-resize"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tu-dialog-title"</span><span class="nt">&gt;</span>New Feature #3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'tu-dialog-body'</span><span class="nt">&gt;</span>This is the lib which you can used to show your site new features<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tu-dialog-pages"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+</pre></div>
 
-<h3>Authors and Contributors</h3>
+<p>Invoke the plugin by calling it on a selector like normal.</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>In below example, please be aware that you want the $dialog1 be attached with $ele1 in position xx.</p>
 
-<h3>Support or Contact</h3>
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">'text/javascript'</span> <span class="na">language=</span><span class="s">'javascript'</span><span class="nt">&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+      <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">whatsnew</span><span class="p">({</span>
+        <span class="s1">'eles'</span><span class="o">:</span> <span class="p">[</span>
+          <span class="p">{</span><span class="s1">'dom'</span><span class="o">:</span> <span class="nx">$ele1</span><span class="p">,</span> <span class="s1">'position'</span><span class="o">:</span> <span class="nx">xx</span><span class="p">},</span> 
+          <span class="p">{</span><span class="s1">'dom'</span><span class="o">:</span> <span class="nx">$ele2</span><span class="p">,</span> <span class="s1">'position'</span><span class="o">:</span> <span class="nx">xx</span><span class="p">},</span>
+          <span class="p">{</span><span class="s1">'dom'</span><span class="o">:</span> <span class="nx">$ele3</span><span class="p">,</span> <span class="s1">'position'</span><span class="o">:</span> <span class="nx">xx</span><span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s1">'boxs'</span><span class="o">:</span><span class="p">[</span>
+          <span class="nx">$dialog1</span><span class="p">,</span>
+          <span class="nx">$dialog2</span><span class="p">,</span>
+          <span class="nx">$dialog3</span>
+        <span class="p">]</span>
+      <span class="p">});</span>
+  <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<h2>Screenshot</h2>
+
+<p><img src="/screenshot.png" alt="jQuery Whatsnew Screenshot"></p>
+
+<h2>Credits</h2>
+
+<p>jQuery Whatsnew developed by <a href="joshokn@gmail.com">Joshua Chi</a> at <a href="http://www.kiwitask.com">KiwiTask</a></p>
+
+<h2>License</h2>
+
+<p>MIT license:</p>
+
+<p><a href="http://www.opensource.org/licenses/MIT">http://www.opensource.org/licenses/MIT</a></p>
       </section>
     </div>
 
