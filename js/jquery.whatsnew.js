@@ -62,8 +62,8 @@
                   
           var whatsnewBoxWidth = box.outerWidth(true);
           var whatsnewBoxHeight = box.outerHeight(true);
-          var elementLeft = eleDom.position().left;
-          var elementTop = eleDom.position().top;
+          var elementLeft = eleDom.offset().left;
+          var elementTop = eleDom.offset().top;
           var elementWidth = eleDom.outerWidth(true);
           var elementHeight = eleDom.outerHeight(true);
 
@@ -124,6 +124,14 @@
 
       initPages: function(box, number, length, prevBox, nextBox) {
         box.append('<img src="/images/plus3_gh_dots_'+(parseInt(number)+1)+'of3.png"></div>');
+
+        if(number == length - 1) {
+          box.append(
+            '<a href="#">' +
+            '<button class="iph-finish-button">Finish</button>'+
+            '</a>');
+            methods.bindFinish(box);
+        }
         if(number < length -1) {
             box.append(
                 '<a href="'+nextBox+'" rel="nextstep">' +
@@ -158,6 +166,13 @@
         box.find('.iph-next-button').on('click', function(){
           box.hide();
           $(nextBox).show();
+        });
+      },
+
+      bindFinish: function(box) {
+        box.find('.iph-finish-button').on('click', function(){
+          box.fadeOut("fast");
+          return false;
         });
       }
     }
